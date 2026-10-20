@@ -1,6 +1,7 @@
 import Loading from "@/components/loading";
 import MostNewsCard from "@/components/NewsSection/MostNewsCard";
 import MostNewsList from "@/components/NewsSection/MostNewsList";
+import MostReedNews from "@/components/NewsSection/MostReedNews";
 import { NewsArticle } from "@/types/NewsArticle";
 import { Suspense } from "react";
 
@@ -21,23 +22,25 @@ async function NewsSection() {
   }
 
   return (
-    <div className="container mx-auto mt-5 h-500">
-      <div className="grid grid-cols-3 gap-5 ">
-        <article className="col-span-2  ">
+    <div className="mx-auto mt-5 w-full max-w-screen-xl px-3 sm:px-4 lg:px-6">
+      <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
+        <article className="min-w-0 lg:col-span-2">
           {/* Most News Section | প্রধান খবর */}
-          <div className=" flex gap-5">
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
             {/* First Most News Card with Images */}
-            <div className=" w-full rounded-[10px] ">
+            <div className="min-w-0 w-full rounded-[10px]">
               <MostNewsCard news={firstMostNews} />
             </div>
             {/* Most News List */}
-            <div className=" w-full rounded-[10px]">
+            <div className="min-w-0 w-full rounded-[10px]">
               <MostNewsList news={mostNewses} />
             </div>
           </div>
         </article>
         {/* Most Reed Section | সর্বাধিক পঠিত  */}
-        <aside className="col-span-1  bg-amber-300 rounded-[10px]"></aside>
+        <aside className="min-w-0 rounded-[10px]">
+          <MostReedNews />
+        </aside>
       </div>
     </div>
   );

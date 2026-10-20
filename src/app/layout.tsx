@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import MainHeader from "@/components/HeaderSection/MainHeader";
+import MainHeader, {
+  LatestNewsBar,
+} from "@/components/HeaderSection/MainHeader";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,6 +31,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <header>
           <MainHeader />
         </header>
+        <LatestNewsBar />
         <main>{children}</main>
       </body>
     </html>

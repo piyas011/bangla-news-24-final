@@ -11,7 +11,7 @@ const MostNewsCard = ({ news }: { news: NewsArticle }) => {
           alt={news.imageAlt}
           width={600}
           height={350}
-          className="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+          className="h-48 w-full object-cover transition-transform duration-500 group-hover:scale-105 sm:h-56"
         />
 
         <span className="absolute left-3 top-3 rounded-md bg-red-600 px-3 py-1 text-xs font-bold text-white shadow">
@@ -20,8 +20,8 @@ const MostNewsCard = ({ news }: { news: NewsArticle }) => {
       </div>
 
       {/* News Content */}
-      <div className="p-5">
-        <h2 className="mb-3 line-clamp-2 text-xl font-bold leading-snug text-gray-900 transition-colors duration-200 group-hover:text-red-600 dark:text-white">
+      <div className="p-4 sm:p-5">
+        <h2 className="mb-3 line-clamp-2 text-lg font-bold leading-snug text-gray-900 transition-colors duration-200 group-hover:text-red-600 sm:text-xl dark:text-white">
           {news.title}
         </h2>
 
@@ -35,7 +35,7 @@ const MostNewsCard = ({ news }: { news: NewsArticle }) => {
             {/* <span>{news.firstPublished}</span> */}
           </span>
 
-          <span className="inline-flex items-center gap-1 text-sm font-semibold text-red-600 transition-transform duration-200 group-hover:translate-x-1">
+          <span className="inline-flex items-center gap-1 text-xs font-semibold text-red-600 transition-transform duration-200 group-hover:translate-x-1 sm:text-sm">
             বিস্তারিত পড়ুন
             <span aria-hidden="true">→</span>
           </span>

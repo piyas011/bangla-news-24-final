@@ -7,13 +7,17 @@ const Navbar = async () => {
   const allCategoryLink: NewsCategory[] = data.data;
   const mainCategoryLink = allCategoryLink.filter((link) => link.scrapable);
   return (
-    <div>
+    <nav className="flex w-max items-center whitespace-nowrap">
       {mainCategoryLink.map((link, i) => (
-        <Link className=" mx-4" key={i} href={link.slug}>
+        <Link
+          className="mx-2 rounded px-2 py-1 text-sm hover:text-red-600 sm:mx-3 sm:text-base"
+          key={i}
+          href={link.slug}
+        >
           {link.title}
         </Link>
       ))}
-    </div>
+    </nav>
   );
 };
 
