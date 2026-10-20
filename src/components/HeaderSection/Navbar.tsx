@@ -8,6 +8,12 @@ const Navbar = async () => {
   const mainCategoryLink = allCategoryLink.filter((link) => link.scrapable);
   return (
     <nav className="flex w-max items-center whitespace-nowrap">
+      <Link
+        className="mx-2 rounded px-2 py-1 text-sm hover:text-red-600 sm:mx-3 sm:text-base"
+        href="/"
+      >
+        হোম
+      </Link>
       {mainCategoryLink.map((link, i) => (
         <Link
           className="mx-2 rounded px-2 py-1 text-sm hover:text-red-600 sm:mx-3 sm:text-base"
