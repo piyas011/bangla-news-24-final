@@ -2,6 +2,7 @@ import Loading from "@/components/loading";
 import MostNewsCard from "@/components/NewsSection/MostNewsCard";
 import MostNewsList from "@/components/NewsSection/MostNewsList";
 import MostReedNews from "@/components/NewsSection/MostReedNews";
+import SelectedNews from "@/components/OtherNewsSection/SelectedNews";
 import { NewsArticle } from "@/types/NewsArticle";
 import { Suspense } from "react";
 
@@ -22,7 +23,7 @@ async function NewsSection() {
   }
 
   return (
-    <div className="mx-auto mt-5 w-full max-w-screen-xl px-3 sm:px-4 lg:px-6">
+    <div className="mx-auto mt-5 w-full max-w-7xl px-3 sm:px-4 lg:px-6">
       <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
         <article className="min-w-0 lg:col-span-2">
           {/* Most News Section | প্রধান খবর */}
@@ -35,6 +36,10 @@ async function NewsSection() {
             <div className="min-w-0 w-full rounded-[10px]">
               <MostNewsList news={mostNewses} />
             </div>
+          </div>
+          {/*  Selected News  */}
+          <div className="my-5 ">
+            <SelectedNews newsProps={news} />
           </div>
         </article>
         {/* Most Reed Section | সর্বাধিক পঠিত  */}

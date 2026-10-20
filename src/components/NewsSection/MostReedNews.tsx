@@ -9,7 +9,6 @@ const MostReedNews = async () => {
   }
   const data = await res.json();
   const mostReedNews: MostReedNews[] = data.data;
-  console.log(mostReedNews);
 
   return (
     <div className="rounded-lg bg-white p-4 shadow-md sm:p-5">
