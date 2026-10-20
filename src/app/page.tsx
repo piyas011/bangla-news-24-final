@@ -1,3 +1,4 @@
+import Loading from "@/components/loading";
 import MostNewsCard from "@/components/NewsSection/MostNewsCard";
 import MostNewsList from "@/components/NewsSection/MostNewsList";
 import { NewsArticle } from "@/types/NewsArticle";
@@ -44,7 +45,7 @@ async function NewsSection() {
 
 export default function Home() {
   return (
-    <Suspense fallback={<p>সংবাদ লোড হচ্ছে...</p>}>
+    <Suspense fallback={<Loading />}>
       <NewsSection />
     </Suspense>
   );
